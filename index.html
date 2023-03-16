@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai1</title>
+</head>
+<body>
+<input type="text" id ="idx_arr">
+<button id="btn_add" onclick="add_element_to_array()">Add</button>
+<button id="btn_display" onclick="display_array()">Display</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+
+  let array = [];
+  function add_element_to_array() {
+    let input = document.getElementById("idx_arr").value;
+    alert(`Element ${input} added at index ${array.length}`);
+    array.push(input);
+    document.getElementById("idx_arr").value = '';
+  }
+  function display_array() {
+    let e_message = '';
+    for (let i = 0; i < array.length; i++) {
+      e_message += `Element ${i} = ${array[i]} <br>`;
+    }
+    document.getElementById('result').innerHTML = e_message;
+  }
+</script>
